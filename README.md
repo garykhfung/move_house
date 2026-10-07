@@ -58,10 +58,13 @@ python3 -m http.server 43127
 ├── styles.css
 ├── app.js
 ├── data.json
+├── favicon.svg
 ├── .nojekyll
 ├── .github/workflows/pages.yml
 └── README.md
 ```
+
+介面跟 Gary house-style（pg_dashboard tokens）：淺色／深色／系統主題（`localStorage` 鍵 `move_house_color_scheme`）、價目篩選 pill、8px 卡片。
 
 ## 免責
 
