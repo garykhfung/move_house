@@ -4,10 +4,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Moorsom Road → City Garden：比較港島住宅搬屋公司公開價目與聯絡，資料來自各公司網站及公開調查。" />
+  <meta name="color-scheme" content="light dark" />
   <title>港島搬屋格｜Moorsom Road → City Garden</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <script>
+    (function () {
+      var key = "move_house_color_scheme";
+      var allowed = { system: 1, light: 1, dark: 1 };
+      var scheme = "system";
+      try {
+        var stored = localStorage.getItem(key);
+        if (stored && allowed[stored]) scheme = stored;
+      } catch (e) {}
+      document.documentElement.dataset.colorScheme = scheme;
+    })();
+  </script>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -19,34 +30,45 @@
         <span class="brand-mark" aria-hidden="true"></span>
         <span class="brand-text">港島搬屋格</span>
       </a>
-      <nav class="nav" aria-label="主要">
-        <a href="#route">路線</a>
-        <a href="#movers">公司</a>
-        <a href="#factors">注意事項</a>
-        <a href="#gaps">資料缺口</a>
-      </nav>
+      <div class="header-actions">
+        <nav class="nav" aria-label="主要">
+          <a href="#route">路線</a>
+          <a href="#movers">公司</a>
+          <a href="#factors">注意事項</a>
+          <a href="#gaps">資料缺口</a>
+        </nav>
+        <button
+          type="button"
+          class="theme-toggle"
+          id="theme-toggle"
+          aria-label="切換主題（系統／淺色／深色）"
+          title="切換主題"
+        >
+          <span class="theme-toggle-icon" aria-hidden="true"></span>
+          <span class="theme-toggle-label" id="theme-toggle-label">系統</span>
+        </button>
+      </div>
     </div>
   </header>
 
   <main>
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-bg" aria-hidden="true"></div>
-      <div class="hero-inner">
-        <p class="brand-hero">港島搬屋格</p>
+    <section class="intro" aria-labelledby="hero-title">
+      <div class="section-inner intro-inner">
+        <p class="eyebrow">港島住宅搬屋 · 公開資料</p>
         <h1 id="hero-title">
           <span class="route-from">Moorsom Road</span>
           <span class="route-arrow" aria-hidden="true">→</span>
           <span class="route-to">City Garden</span>
         </h1>
-        <p class="hero-sub">
+        <p class="intro-sub">
           <span id="route-label">Moorsom Road → City Garden · 公開價目比較</span>
-          <span class="hero-sub-en" id="route-note"></span>
+          <span class="intro-note" id="route-note"></span>
         </p>
-        <div class="hero-cta">
+        <div class="intro-cta">
           <a class="btn btn-primary" href="#movers">睇公司同價錢</a>
-          <a class="btn btn-ghost" href="#factors">樓宇出入貼士</a>
+          <a class="btn btn-secondary" href="#factors">樓宇出入貼士</a>
         </div>
-        <p class="hero-meta" id="updated-at" hidden></p>
+        <p class="intro-meta" id="updated-at" hidden></p>
       </div>
     </section>
 
@@ -71,18 +93,18 @@
             <svg class="route-svg" viewBox="0 0 320 200" role="img">
               <defs>
                 <linearGradient id="roadGrad" x1="0" y1="0" x2="1" y2="0">
-                  <stop offset="0%" stop-color="#c8102e" />
-                  <stop offset="100%" stop-color="#1a6b8a" />
+                  <stop offset="0%" stop-color="var(--primary)" />
+                  <stop offset="100%" stop-color="var(--monitor)" />
                 </linearGradient>
               </defs>
-              <rect width="320" height="200" fill="#0f1a24" rx="12" />
+              <rect width="320" height="200" fill="var(--surface-elevated)" rx="8" />
               <path d="M40 150 C90 140, 110 80, 160 70 C210 60, 240 90, 280 55" fill="none" stroke="url(#roadGrad)" stroke-width="4" stroke-linecap="round" class="route-path" />
-              <circle cx="40" cy="150" r="10" fill="#c8102e" />
-              <circle cx="280" cy="55" r="10" fill="#1a6b8a" />
-              <text x="40" y="178" text-anchor="middle" fill="#f2f4f6" font-size="11" font-family="Noto Sans TC, sans-serif">Moorsom Rd</text>
-              <text x="40" y="192" text-anchor="middle" fill="#9aa6b2" font-size="9" font-family="Noto Sans TC, sans-serif">渣甸山</text>
-              <text x="280" y="30" text-anchor="middle" fill="#f2f4f6" font-size="11" font-family="Noto Sans TC, sans-serif">City Garden</text>
-              <text x="280" y="44" text-anchor="middle" fill="#9aa6b2" font-size="9" font-family="Noto Sans TC, sans-serif">北角</text>
+              <circle cx="40" cy="150" r="8" fill="var(--primary)" />
+              <circle cx="280" cy="55" r="8" fill="var(--monitor)" />
+              <text x="40" y="178" text-anchor="middle" fill="var(--text)" font-size="11" font-family="system-ui, sans-serif">Moorsom Rd</text>
+              <text x="40" y="192" text-anchor="middle" fill="var(--muted)" font-size="9" font-family="system-ui, sans-serif">渣甸山</text>
+              <text x="280" y="30" text-anchor="middle" fill="var(--text)" font-size="11" font-family="system-ui, sans-serif">City Garden</text>
+              <text x="280" y="44" text-anchor="middle" fill="var(--muted)" font-size="9" font-family="system-ui, sans-serif">北角</text>
             </svg>
           </div>
         </div>
@@ -100,12 +122,22 @@
           <h2 id="movers-heading">搬屋公司比較</h2>
           <p class="section-lead">
             由 <code>data.json</code> 載入（schema v<span id="schema-version">—</span>）。
-            <span class="feeStatus published">published</span> 顯示公開價目並連到來源；
-            <span class="feeStatus quote">需報價</span> 則不顯示虛構價錢。
+            <span class="pill pill-ok">有公開價目</span>
+            顯示公開價目並連到來源；
+            <span class="pill pill-pending">需報價</span>
+            則不顯示虛構價錢。
           </p>
         </div>
+
+        <div class="filter-bar" role="group" aria-label="篩選價目狀態">
+          <button type="button" class="filter-pill is-active" data-filter="all" aria-pressed="true">全部</button>
+          <button type="button" class="filter-pill" data-filter="published" aria-pressed="false">有公開價目</button>
+          <button type="button" class="filter-pill" data-filter="quote" aria-pressed="false">需報價</button>
+        </div>
+
         <div id="movers-status" class="status" role="status" aria-live="polite">載入中…</div>
         <div id="movers-list" class="movers-list" hidden></div>
+        <p id="movers-empty" class="status" hidden>呢個篩選暫時冇公司。</p>
       </div>
     </section>
 
@@ -149,7 +181,7 @@
           <p class="mover-name-en"></p>
           <p class="mover-checked"></p>
         </div>
-        <p class="mover-fee-status"></p>
+        <p class="mover-fee-status pill"></p>
       </div>
       <p class="mover-notes"></p>
       <div class="mover-coverage" hidden>

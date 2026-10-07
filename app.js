@@ -1,8 +1,12 @@
 (() => {
   const DATA_URL = "data.json";
+  const THEME_KEY = "move_house_color_scheme";
+  const THEME_ORDER = ["system", "light", "dark"];
+  const THEME_LABELS = { system: "系統", light: "淺色", dark: "深色" };
 
   const statusEl = document.getElementById("movers-status");
   const listEl = document.getElementById("movers-list");
+  const emptyEl = document.getElementById("movers-empty");
   const factorsEl = document.getElementById("factors-list");
   const gapsEl = document.getElementById("gaps-panels");
   const disclaimerEl = document.getElementById("disclaimer");
@@ -14,6 +18,12 @@
   const currencyEl = document.getElementById("meta-currency");
   const timezoneEl = document.getElementById("meta-timezone");
   const tpl = document.getElementById("mover-card-tpl");
+  const themeToggle = document.getElementById("theme-toggle");
+  const themeLabel = document.getElementById("theme-toggle-label");
+  const filterBar = document.querySelector(".filter-bar");
+
+  let activeFilter = "all";
+  let moverNodes = [];
 
   function digitsOnly(value) {
     return String(value || "").replace(/\D/g, "");
@@ -78,6 +88,34 @@
     return !status || status === "需報價" || /quote/i.test(status);
   }
 
+  function getTheme() {
+    const v = document.documentElement.dataset.colorScheme;
+    return THEME_ORDER.includes(v) ? v : "system";
+  }
+
+  function applyTheme(scheme) {
+    const next = THEME_ORDER.includes(scheme) ? scheme : "system";
+    document.documentElement.dataset.colorScheme = next;
+    try {
+      localStorage.setItem(THEME_KEY, next);
+    } catch {
+      /* ignore private mode */
+    }
+    if (themeLabel) themeLabel.textContent = THEME_LABELS[next];
+    if (themeToggle) {
+      themeToggle.setAttribute(
+        "aria-label",
+        `目前主題：${THEME_LABELS[next]}。按一下切換`
+      );
+      themeToggle.title = `主題：${THEME_LABELS[next]}`;
+    }
+  }
+
+  function cycleTheme() {
+    const i = THEME_ORDER.indexOf(getTheme());
+    applyTheme(THEME_ORDER[(i + 1) % THEME_ORDER.length]);
+  }
+
   function appendFeeItem(ul, fee) {
     const li = document.createElement("li");
     li.className = "fee-item";
@@ -135,6 +173,9 @@
     const node = tpl.content.firstElementChild.cloneNode(true);
     const quoteOnly = isQuoteOnly(mover.feeStatus);
 
+    node.dataset.feeKind = quoteOnly ? "quote" : "published";
+    node.classList.add(quoteOnly ? "is-quote" : "is-published");
+
     node.querySelector(".mover-name-zh").textContent = mover.name || "未命名";
     const en = node.querySelector(".mover-name-en");
     if (mover.nameEn && mover.nameEn !== mover.name) {
@@ -171,7 +212,6 @@
       rows.forEach(([k, v]) => {
         if (!v && v !== false) return;
         const li = document.createElement("li");
-        li.innerHTML = "";
         const strong = document.createElement("strong");
         strong.textContent = `${k}：`;
         li.append(strong, document.createTextNode(String(v)));
@@ -245,6 +285,28 @@
 
     renderSources(node.querySelector(".sources-list"), mover.sources);
     return node;
+  }
+
+  function applyFilter(filter) {
+    activeFilter = filter || "all";
+    let visible = 0;
+    moverNodes.forEach((node) => {
+      const kind = node.dataset.feeKind;
+      const show =
+        activeFilter === "all" ||
+        (activeFilter === "published" && kind === "published") ||
+        (activeFilter === "quote" && kind === "quote");
+      node.hidden = !show;
+      if (show) visible += 1;
+    });
+    if (emptyEl) emptyEl.hidden = visible > 0 || !moverNodes.length;
+    if (filterBar) {
+      filterBar.querySelectorAll(".filter-pill").forEach((btn) => {
+        const on = btn.dataset.filter === activeFilter;
+        btn.classList.toggle("is-active", on);
+        btn.setAttribute("aria-pressed", on ? "true" : "false");
+      });
+    }
   }
 
   function renderFactors(factors) {
@@ -325,7 +387,22 @@
     document.title = "港島搬屋格｜Moorsom Road → City Garden";
   }
 
+  function bindChrome() {
+    applyTheme(getTheme());
+    if (themeToggle) {
+      themeToggle.addEventListener("click", cycleTheme);
+    }
+    if (filterBar) {
+      filterBar.addEventListener("click", (e) => {
+        const btn = e.target.closest(".filter-pill");
+        if (!btn) return;
+        applyFilter(btn.dataset.filter);
+      });
+    }
+  }
+
   async function boot() {
+    bindChrome();
     try {
       const res = await fetch(DATA_URL, { cache: "no-store" });
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
@@ -337,10 +414,12 @@
 
       const movers = Array.isArray(data.movers) ? data.movers : [];
       listEl.replaceChildren();
-      movers.forEach((m) => listEl.appendChild(renderMover(m)));
+      moverNodes = movers.map((m) => renderMover(m));
+      moverNodes.forEach((n) => listEl.appendChild(n));
       listEl.hidden = false;
       statusEl.hidden = true;
       statusEl.textContent = "";
+      applyFilter(activeFilter);
     } catch (err) {
       console.error(err);
       statusEl.classList.add("error");
@@ -348,6 +427,7 @@
       statusEl.textContent =
         "無法載入 data.json。請用本地伺服器開啟（例如 python3 -m http.server），或檢查檔案是否存在。";
       listEl.hidden = true;
+      if (emptyEl) emptyEl.hidden = true;
     }
   }
 
