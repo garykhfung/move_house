@@ -1,19 +1,8 @@
 /* 港島搬屋格 — house tokens from pg_dashboard methodology */
+/* Light colours are NOT on bare :root — that leaked under dark on some mobile browsers
+   (light card surfaces + pale dark-theme text). Theme colours only on scheme selectors. */
 
-:root,
-html[data-color-scheme="light"] {
-  color-scheme: light;
-  --bg: #f8fafc;
-  --surface: #ffffff;
-  --surface-elevated: #f8fafc;
-  --surface-hover: #f1f5f9;
-  --accent-surface: #e6f4f3;
-  --accent-surface-hover: #f0fdfa;
-  --border: #e2e8f0;
-  --text: #1e293b;
-  --muted: #64748b;
-  --on-primary: #ffffff;
-  --primary: #044147;
+:root {
   --ok: #06bb8c;
   --warning: #f59e0b;
   --critical: #db1251;
@@ -27,6 +16,24 @@ html[data-color-scheme="light"] {
   --max: 960px;
 }
 
+/* Fallback when boot script has not run yet / JS blocked */
+:root:not([data-color-scheme]),
+html[data-color-scheme="light"],
+html[data-color-scheme="system"] {
+  color-scheme: light;
+  --bg: #f8fafc;
+  --surface: #ffffff;
+  --surface-elevated: #f8fafc;
+  --surface-hover: #f1f5f9;
+  --accent-surface: #e6f4f3;
+  --accent-surface-hover: #f0fdfa;
+  --border: #e2e8f0;
+  --text: #1e293b;
+  --muted: #64748b;
+  --on-primary: #ffffff;
+  --primary: #044147;
+}
+
 @media (prefers-color-scheme: dark) {
   html[data-color-scheme="system"] {
     color-scheme: dark;
@@ -37,8 +44,10 @@ html[data-color-scheme="light"] {
     --accent-surface: color-mix(in srgb, #5eead4 14%, #181b1f);
     --accent-surface-hover: color-mix(in srgb, #5eead4 20%, #181b1f);
     --border: #343741;
-    --text: #ccccdc;
-    --muted: #9b9baf;
+    /* #e2e8f0 on #181b1f ≈ 14:1 — AA body text */
+    --text: #e2e8f0;
+    /* #a1a1b5 on #181b1f ≈ 7:1 — AA muted */
+    --muted: #a1a1b5;
     --on-primary: #042f2e;
     --primary: #5eead4;
   }
@@ -53,15 +62,10 @@ html[data-color-scheme="dark"] {
   --accent-surface: color-mix(in srgb, #5eead4 14%, #181b1f);
   --accent-surface-hover: color-mix(in srgb, #5eead4 20%, #181b1f);
   --border: #343741;
-  --text: #ccccdc;
-  --muted: #9b9baf;
+  --text: #e2e8f0;
+  --muted: #a1a1b5;
   --on-primary: #042f2e;
   --primary: #5eead4;
-  --ok: #06bb8c;
-  --warning: #f59e0b;
-  --critical: #db1251;
-  --monitor: #0679c5;
-  --pending: #94a3b8;
 }
 
 *,
@@ -585,6 +589,7 @@ h2 {
 
 .mover-card {
   background: var(--surface);
+  color: var(--text);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   border-left: 3px solid var(--pending);
@@ -600,9 +605,41 @@ h2 {
   border-left-color: var(--pending);
 }
 
-.mover-card:hover {
-  background: var(--surface-hover);
-  border-color: color-mix(in srgb, var(--primary) 22%, var(--border));
+/* Touch devices keep :hover sticky — only elevate on real hover pointers */
+@media (hover: hover) {
+  .mover-card:hover {
+    background: var(--surface-hover);
+    border-color: color-mix(in srgb, var(--primary) 22%, var(--border));
+  }
+}
+
+/* Belt-and-suspenders: dark cards never inherit a light surface */
+@media (prefers-color-scheme: dark) {
+  html[data-color-scheme="system"] .mover-card,
+  html[data-color-scheme="system"] .tip-card,
+  html[data-color-scheme="system"] .gap-panel,
+  html[data-color-scheme="system"] .route-facts li {
+    background: var(--surface);
+    color: var(--text);
+  }
+
+  html[data-color-scheme="system"] .fee-item:not(.quote-only) {
+    background: var(--surface-elevated);
+    color: var(--text);
+  }
+}
+
+html[data-color-scheme="dark"] .mover-card,
+html[data-color-scheme="dark"] .tip-card,
+html[data-color-scheme="dark"] .gap-panel,
+html[data-color-scheme="dark"] .route-facts li {
+  background: var(--surface);
+  color: var(--text);
+}
+
+html[data-color-scheme="dark"] .fee-item:not(.quote-only) {
+  background: var(--surface-elevated);
+  color: var(--text);
 }
 
 .mover-card-top {
@@ -782,8 +819,10 @@ h2 {
   transition: background var(--motion);
 }
 
-.tip-card:hover {
-  background: var(--surface-hover);
+@media (hover: hover) {
+  .tip-card:hover {
+    background: var(--surface-hover);
+  }
 }
 
 .tip-card h3 {
