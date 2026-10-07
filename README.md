@@ -41,9 +41,12 @@ python3 -m http.server 43127
 ## 啟用 GitHub Pages
 
 1. Repo 設為 **public**（免費 Pages 需要公開庫）。
-2. 推送到 **`main`**，網站檔在 **repo 根目錄**。
-3. GitHub → **Settings** → **Pages** → Deploy from branch → **`main`** / **`/` (root)**。
-4. 數分鐘後用 `https://<user>.github.io/<repo>/` 開啟。
+2. 網站檔在 **`main` 根目錄**：`index.html`、`styles.css`、`app.js`、`data.json`（另有 `.nojekyll`）。
+3. **Settings → Pages → Build and deployment → Source** 可二選一：
+   - **Deploy from a branch** → branch `main` / folder `/ (root)`；或
+   - **GitHub Actions** → 使用本庫 [`.github/workflows/pages.yml`](.github/workflows/pages.yml)（`upload-pages-artifact` + `deploy-pages`）。
+4. 若改為 **GitHub Actions**：切換 Source 後必須讓 workflow **成功跑完一次**（push 到 `main`，或 Actions → **Deploy GitHub Pages** → Run workflow）。
+5. 預期網址：https://garykhfung.github.io/move_house/
 
 無需 `npm run build`。
 
@@ -55,6 +58,8 @@ python3 -m http.server 43127
 ├── styles.css
 ├── app.js
 ├── data.json
+├── .nojekyll
+├── .github/workflows/pages.yml
 └── README.md
 ```
 
