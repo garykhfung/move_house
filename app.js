@@ -286,6 +286,12 @@
       const p = document.createElement("p");
       p.textContent = item.detail || "";
       article.append(h3, p);
+      if (item.certainty) {
+        const certainty = document.createElement("p");
+        certainty.className = "factor-certainty";
+        certainty.textContent = item.certainty;
+        article.appendChild(certainty);
+      }
       if (Array.isArray(item.sources) && item.sources.length) {
         const ul = document.createElement("ul");
         ul.className = "factor-sources";
