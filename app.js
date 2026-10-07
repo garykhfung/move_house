@@ -1,8 +1,5 @@
 (() => {
   const DATA_URL = "data.json";
-  const THEME_KEY = "move_house_color_scheme";
-  const THEME_ORDER = ["system", "light", "dark"];
-  const THEME_LABELS = { system: "系統", light: "淺色", dark: "深色" };
 
   const statusEl = document.getElementById("movers-status");
   const listEl = document.getElementById("movers-list");
@@ -18,8 +15,6 @@
   const currencyEl = document.getElementById("meta-currency");
   const timezoneEl = document.getElementById("meta-timezone");
   const tpl = document.getElementById("mover-card-tpl");
-  const themeToggle = document.getElementById("theme-toggle");
-  const themeLabel = document.getElementById("theme-toggle-label");
   const filterBar = document.querySelector(".filter-bar");
 
   let activeFilter = "all";
@@ -86,34 +81,6 @@
 
   function isQuoteOnly(status) {
     return !status || status === "需報價" || /quote/i.test(status);
-  }
-
-  function getTheme() {
-    const v = document.documentElement.dataset.colorScheme;
-    return THEME_ORDER.includes(v) ? v : "system";
-  }
-
-  function applyTheme(scheme) {
-    const next = THEME_ORDER.includes(scheme) ? scheme : "system";
-    document.documentElement.dataset.colorScheme = next;
-    try {
-      localStorage.setItem(THEME_KEY, next);
-    } catch {
-      /* ignore private mode */
-    }
-    if (themeLabel) themeLabel.textContent = THEME_LABELS[next];
-    if (themeToggle) {
-      themeToggle.setAttribute(
-        "aria-label",
-        `目前主題：${THEME_LABELS[next]}。按一下切換`
-      );
-      themeToggle.title = `主題：${THEME_LABELS[next]}`;
-    }
-  }
-
-  function cycleTheme() {
-    const i = THEME_ORDER.indexOf(getTheme());
-    applyTheme(THEME_ORDER[(i + 1) % THEME_ORDER.length]);
   }
 
   function appendFeeItem(ul, fee) {
@@ -388,10 +355,6 @@
   }
 
   function bindChrome() {
-    applyTheme(getTheme());
-    if (themeToggle) {
-      themeToggle.addEventListener("click", cycleTheme);
-    }
     if (filterBar) {
       filterBar.addEventListener("click", (e) => {
         const btn = e.target.closest(".filter-pill");

@@ -4,21 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Moorsom Road → City Garden：比較港島住宅搬屋公司公開價目與聯絡，資料來自各公司網站及公開調查。" />
-  <meta name="color-scheme" content="light dark" />
+  <meta name="color-scheme" content="light" />
   <title>港島搬屋格｜Moorsom Road → City Garden</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-  <script>
-    (function () {
-      var key = "move_house_color_scheme";
-      var allowed = { system: 1, light: 1, dark: 1 };
-      var scheme = "system";
-      try {
-        var stored = localStorage.getItem(key);
-        if (stored && allowed[stored]) scheme = stored;
-      } catch (e) {}
-      document.documentElement.dataset.colorScheme = scheme;
-    })();
-  </script>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -30,24 +18,12 @@
         <span class="brand-mark" aria-hidden="true"></span>
         <span class="brand-text">港島搬屋格</span>
       </a>
-      <div class="header-actions">
-        <nav class="nav" aria-label="主要">
-          <a href="#route">路線</a>
-          <a href="#movers">公司</a>
-          <a href="#factors">注意事項</a>
-          <a href="#gaps">資料缺口</a>
-        </nav>
-        <button
-          type="button"
-          class="theme-toggle"
-          id="theme-toggle"
-          aria-label="切換主題（系統／淺色／深色）"
-          title="切換主題"
-        >
-          <span class="theme-toggle-icon" aria-hidden="true"></span>
-          <span class="theme-toggle-label" id="theme-toggle-label">系統</span>
-        </button>
-      </div>
+      <nav class="nav" aria-label="主要">
+        <a href="#route">路線</a>
+        <a href="#movers">公司</a>
+        <a href="#factors">注意事項</a>
+        <a href="#gaps">資料缺口</a>
+      </nav>
     </div>
   </header>
 
