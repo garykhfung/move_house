@@ -1,0 +1,408 @@
+{
+  "meta": {
+    "routeLabel": "Moorsom Road (HK Island / Jardine's Lookout area) → City Garden, North Point",
+    "routeNote": "Public comparison only; no private addresses. Both ends are Hong Kong Island (Mid-Levels/Peak-adjacent → Eastern District).",
+    "currency": "HKD",
+    "lastChecked": "2026-10-07",
+    "timezone": "Asia/Hong_Kong",
+    "disclaimer": "Fees are copied from public company pages or cited public surveys only. Not a quote. Always reconfirm with the company. Never treat aggregator or survey figures as a binding price."
+  },
+  "schemaVersion": 1,
+  "movers": [
+    {
+      "id": "apple-moving",
+      "name": "蘋果搬運",
+      "nameEn": "Apple Moving",
+      "website": "https://www.applemoving.com.hk/",
+      "phone": "+852 8208 9911",
+      "whatsapp": "+852 5408 0627",
+      "notes": "Local residential & office moves, furniture dismantle/reassemble, packing materials, storage via Apple Mini Storage group. Covers HK Island, Kowloon, NT. Publishes point-to-point family packages and surcharge table. Extra: stairs %, long push %, Sunday/PH 20%, platform lift HKD300; parking/tunnel reimbursement.",
+      "coverage": {
+        "midLevelsPeak": "Island-wide local moves stated; Mid-Levels/Peak not named separately on pricing page",
+        "northPoint": "HK Island coverage includes Eastern District / North Point via group storage pages",
+        "islandLocal": true,
+        "sources": [
+          "https://www.applemoving.com.hk/",
+          "https://www.applemoving.com.hk/en/eng-pricing/",
+          "https://www.applestorage.com.hk/location/hk/northpoint/"
+        ]
+      },
+      "feeStatus": "published",
+      "fees": [
+        {"label": "全包家庭套餐 1–2人（含包裝運送；樓梯/推路/無電梯另計）", "amountMin": 2200, "amountMax": 2200, "currency": "HKD", "unit": "package", "sourceUrl": "https://www.applemoving.com.hk/en/eng-pricing/"},
+        {"label": "全包家庭套餐 3–4人", "amountMin": 3200, "amountMax": 3200, "currency": "HKD", "unit": "package", "sourceUrl": "https://www.applemoving.com.hk/en/eng-pricing/"},
+        {"label": "全包家庭套餐 5–6人", "amountMin": 4300, "amountMax": 4300, "currency": "HKD", "unit": "package", "sourceUrl": "https://www.applemoving.com.hk/en/eng-pricing/"},
+        {"label": "平台升降機（每程）", "amountMin": 300, "amountMax": 300, "currency": "HKD", "unit": "trip", "sourceUrl": "https://www.applemoving.com.hk/en/eng-pricing/"},
+        {"label": "樓梯附加（4–15級）", "amountMin": null, "amountMax": null, "currency": "HKD", "unit": "30% surcharge on move", "sourceUrl": "https://www.applemoving.com.hk/en/eng-pricing/"},
+        {"label": "樓梯附加（16–30級）", "amountMin": null, "amountMax": null, "currency": "HKD", "unit": "50% surcharge on move", "sourceUrl": "https://www.applemoving.com.hk/en/eng-pricing/"},
+        {"label": "樓梯附加（31–45級）", "amountMin": null, "amountMax": null, "currency": "HKD", "unit": "70% surcharge on move", "sourceUrl": "https://www.applemoving.com.hk/en/eng-pricing/"},
+        {"label": "推路 ≥50m", "amountMin": null, "amountMax": null, "currency": "HKD", "unit": "20% surcharge", "sourceUrl": "https://www.applemoving.com.hk/en/eng-pricing/"},
+        {"label": "推路 ≥200m", "amountMin": null, "amountMax": null, "currency": "HKD", "unit": "30% surcharge", "sourceUrl": "https://www.applemoving.com.hk/en/eng-pricing/"},
+        {"label": "星期日及公眾假期", "amountMin": null, "amountMax": null, "currency": "HKD", "unit": "20% surcharge", "sourceUrl": "https://www.applemoving.com.hk/en/eng-pricing/"},
+        {"label": "紙箱", "amountMin": 28, "amountMax": 28, "currency": "HKD", "unit": "each", "sourceUrl": "https://www.applemoving.com.hk/en/eng-pricing/"}
+      ],
+      "sources": [
+        "https://www.applemoving.com.hk/",
+        "https://www.applemoving.com.hk/en/eng-pricing/"
+      ],
+      "lastChecked": "2026-10-07"
+    },
+    {
+      "id": "cc-move",
+      "name": "長治搬運",
+      "nameEn": "CC Move / Changzhi Moving",
+      "website": "https://ccmove.com.hk/",
+      "phone": "+852 2381 0799",
+      "whatsapp": "+852 9765 8139",
+      "notes": "Est. 2013. Residential/office/shop/warehouse; packing, dismantling, piano, storage, clearance. Publishes 2026 online budget calculator (not a formal quote). Explicit Eastern District / City Garden (城市花園) building notes page. Island↔NT cross-district calculator rule HKD360.",
+      "coverage": {
+        "midLevelsPeak": "HK Island service includes Central & Western; Peak/Mid-Levels steep roads & parking noted as quote factors",
+        "northPoint": "Eastern District page lists 北角 and 城市花園",
+        "islandLocal": true,
+        "sources": [
+          "https://ccmove.com.hk/moving_calculator.html",
+          "https://ccmove.com.hk/%E5%A4%A7%E5%BB%88%E6%90%AC%E5%B1%8B%E8%B3%87%E6%96%99/%E6%9D%B1%E5%8D%80/"
+        ]
+      },
+      "feeStatus": "published",
+      "fees": [
+        {"label": "計價器面積基本費（同區、有電梯、未計物品）200呎以下", "amountMin": 1350, "amountMax": 1350, "currency": "HKD", "unit": "base budget", "sourceUrl": "https://ccmove.com.hk/moving_calculator.html"},
+        {"label": "計價器面積基本費 400–500呎", "amountMin": 2700, "amountMax": 2700, "currency": "HKD", "unit": "base budget", "sourceUrl": "https://ccmove.com.hk/moving_calculator.html"},
+        {"label": "計價器面積基本費 1500呎以上", "amountMin": 8100, "amountMax": 8100, "currency": "HKD", "unit": "base budget", "sourceUrl": "https://ccmove.com.hk/moving_calculator.html"},
+        {"label": "細電梯（每個地址）", "amountMin": 150, "amountMax": 150, "currency": "HKD", "unit": "per address", "sourceUrl": "https://ccmove.com.hk/moving_calculator.html"},
+        {"label": "無電梯樓梯（每地址每層）", "amountMin": 90, "amountMax": 90, "currency": "HKD", "unit": "per floor per address", "sourceUrl": "https://ccmove.com.hk/moving_calculator.html"},
+        {"label": "一般跨區", "amountMin": 180, "amountMax": 180, "currency": "HKD", "unit": "surcharge", "sourceUrl": "https://ccmove.com.hk/moving_calculator.html"},
+        {"label": "港島往返新界", "amountMin": 360, "amountMax": 360, "currency": "HKD", "unit": "surcharge", "sourceUrl": "https://ccmove.com.hk/moving_calculator.html"},
+        {"label": "直立式鋼琴", "amountMin": 1800, "amountMax": 1800, "currency": "HKD", "unit": "each", "sourceUrl": "https://ccmove.com.hk/moving_calculator.html"}
+      ],
+      "feeNote": "網上結果是預算工具，不等同正式書面報價（公司原文）。",
+      "sources": [
+        "https://ccmove.com.hk/moving_calculator.html",
+        "https://ccmove.com.hk/%E8%81%AF%E7%B5%A1%E6%88%91%E5%80%91/",
+        "https://ccmove.com.hk/%E5%A4%A7%E5%BB%88%E6%90%AC%E5%B1%8B%E8%B3%87%E6%96%99/%E6%9D%B1%E5%8D%80/"
+      ],
+      "lastChecked": "2026-10-07"
+    },
+    {
+      "id": "star-express",
+      "name": "港昇搬運",
+      "nameEn": "Star Express Moving",
+      "website": "https://www.starexpresshk.com/",
+      "phone": "+852 5241 1664",
+      "whatsapp": "+852 5241 1664",
+      "notes": "ISO 9001 claimed. Own fleet HiAce to 9-ton; packing, dismantling, storage, clearance, hoist. Publishes 2026 budget ranges and add-on bands (reference, not locked package). Mid-Levels-style factors (stairs, push, height-limited car parks) listed as priced variables.",
+      "coverage": {
+        "midLevelsPeak": "Pricing page discusses Mid-Levels-typical constraints (stairs, long push, car-park height) as charge drivers; no Moorsom-specific page",
+        "northPoint": "Island residential moves in general service scope",
+        "islandLocal": true,
+        "sources": ["https://www.starexpresshk.com/moving-pricing"]
+      },
+      "feeStatus": "published",
+      "fees": [
+        {"label": "少量紙箱/行李（常見預算參考）", "amountMin": 500, "amountMax": 1500, "currency": "HKD", "unit": "job range", "sourceUrl": "https://www.starexpresshk.com/moving-pricing"},
+        {"label": "輕量小型搬屋/套房（常見預算參考）", "amountMin": 1000, "amountMax": 2500, "currency": "HKD", "unit": "job range", "sourceUrl": "https://www.starexpresshk.com/moving-pricing"},
+        {"label": "一般家庭 1–2房（常見預算參考）", "amountMin": 3000, "amountMax": 12000, "currency": "HKD", "unit": "job range", "sourceUrl": "https://www.starexpresshk.com/moving-pricing"},
+        {"label": "大型家庭 3房以上（常見預算參考）", "amountMin": 8000, "amountMax": 15000, "currency": "HKD", "unit": "job range+", "sourceUrl": "https://www.starexpresshk.com/moving-pricing"},
+        {"label": "樓梯搬運費", "amountMin": 30, "amountMax": 100, "currency": "HKD", "unit": "per item per floor", "sourceUrl": "https://www.starexpresshk.com/moving-pricing"},
+        {"label": "平台/長走廊推路費（每約50米）", "amountMin": 100, "amountMax": 300, "currency": "HKD", "unit": "distance band", "sourceUrl": "https://www.starexpresshk.com/moving-pricing"},
+        {"label": "常規傢俬拆裝", "amountMin": 100, "amountMax": 300, "currency": "HKD", "unit": "per item", "sourceUrl": "https://www.starexpresshk.com/moving-pricing"},
+        {"label": "紙箱（加購）", "amountMin": 25, "amountMax": 25, "currency": "HKD", "unit": "each", "sourceUrl": "https://www.starexpresshk.com/moving-pricing"}
+      ],
+      "sources": [
+        "https://www.starexpresshk.com/moving-pricing",
+        "https://www.starexpresshk.com/contact-us"
+      ],
+      "lastChecked": "2026-10-07"
+    },
+    {
+      "id": "priceright",
+      "name": "實惠搬屋",
+      "nameEn": "Price Right Removal / Priceright",
+      "website": "https://www.priceright.com.hk/",
+      "phone": "+852 2693 3332",
+      "whatsapp": "+852 5463 3000",
+      "notes": "Per-item public price list (extensive). Min moving-fee consumption HKD500. Packing materials = 10% of moving fee. Stair surcharge % of moving fee; Sat/Sun/PH +HKD200. Explicit HK Island notes including 北角; Mid-Levels narrow roads / long push called out as cost drivers. 5.5T truck distance examples published (Island Chai Wan↔Kennedy Town HKD850 etc.).",
+      "coverage": {
+        "midLevelsPeak": "Island section notes Mid-Levels narrow roads may require distant parking then push",
+        "northPoint": "HK Island coverage includes 北角",
+        "islandLocal": true,
+        "sources": ["https://www.priceright.com.hk/moving-price-list-hk/"]
+      },
+      "feeStatus": "published",
+      "fees": [
+        {"label": "搬運費最低消費", "amountMin": 500, "amountMax": 500, "currency": "HKD", "unit": "job minimum", "sourceUrl": "https://www.priceright.com.hk/moving-price-list-hk/"},
+        {"label": "標準紙箱/膠箱/紅白藍袋搬運（≤25kg）", "amountMin": 12, "amountMax": 12, "currency": "HKD", "unit": "each", "sourceUrl": "https://www.priceright.com.hk/moving-price-list-hk/"},
+        {"label": "細紙箱等細雜物", "amountMin": 6, "amountMax": 6, "currency": "HKD", "unit": "each", "sourceUrl": "https://www.priceright.com.hk/moving-price-list-hk/"},
+        {"label": "物料及包裝費", "amountMin": null, "amountMax": null, "currency": "HKD", "unit": "10% of moving fee", "sourceUrl": "https://www.priceright.com.hk/moving-price-list-hk/"},
+        {"label": "行1層樓梯（5–15級）", "amountMin": null, "amountMax": null, "currency": "HKD", "unit": "30% of moving fee", "sourceUrl": "https://www.priceright.com.hk/moving-price-list-hk/"},
+        {"label": "推遠路每50米平路", "amountMin": null, "amountMax": null, "currency": "HKD", "unit": "15% of moving fee", "sourceUrl": "https://www.priceright.com.hk/moving-price-list-hk/"},
+        {"label": "星期六／日／公眾假期附加費", "amountMin": 200, "amountMax": 200, "currency": "HKD", "unit": "job", "sourceUrl": "https://www.priceright.com.hk/moving-price-list-hk/"},
+        {"label": "專業搬屋紙箱（訂購）", "amountMin": 15, "amountMax": 15, "currency": "HKD", "unit": "each", "sourceUrl": "https://www.priceright.com.hk/moving-price-list-hk/"},
+        {"label": "路程費例子：柴灣→堅尼地城（5.5噸）", "amountMin": 850, "amountMax": 850, "currency": "HKD", "unit": "distance fee example", "sourceUrl": "https://www.priceright.com.hk/moving-price-list-hk/"}
+      ],
+      "sources": ["https://www.priceright.com.hk/moving-price-list-hk/"],
+      "lastChecked": "2026-10-07"
+    },
+    {
+      "id": "speedy-move",
+      "name": "迅速搬運",
+      "nameEn": "Speedy Move",
+      "website": "https://speedy-move.com/moving/",
+      "phone": "+852 9847 7838",
+      "whatsapp": "+852 9847 7838",
+      "notes": "Residential/office/village; packing, dismantling, disposal, storage. Publishes all-inclusive household packages (estimates). Explicitly lists Mid Level and North Point under HK Island service areas. Stair: HKD50–200 per large item per flight (site text). Remote-area transport surcharge HKD200–500.",
+      "coverage": {
+        "midLevelsPeak": "Lists Mid Level on HK Island service list",
+        "northPoint": "Lists North Point",
+        "islandLocal": true,
+        "sources": ["https://speedy-move.com/moving/"]
+      },
+      "feeStatus": "published",
+      "fees": [
+        {"label": "全包套餐 1–2人（由…起；估價）", "amountMin": 2000, "amountMax": null, "currency": "HKD", "unit": "package from", "sourceUrl": "https://speedy-move.com/moving/"},
+        {"label": "全包套餐 3–4人（由…起；估價）", "amountMin": 4000, "amountMax": null, "currency": "HKD", "unit": "package from", "sourceUrl": "https://speedy-move.com/moving/"},
+        {"label": "全包套餐 5–6人（由…起；估價）", "amountMin": 6000, "amountMax": null, "currency": "HKD", "unit": "package from", "sourceUrl": "https://speedy-move.com/moving/"},
+        {"label": "樓梯搬運（大型傢俬每層）", "amountMin": 50, "amountMax": 200, "currency": "HKD", "unit": "per large item per flight", "sourceUrl": "https://speedy-move.com/moving/"},
+        {"label": "偏遠地區運輸附加", "amountMin": 200, "amountMax": 500, "currency": "HKD", "unit": "surcharge", "sourceUrl": "https://speedy-move.com/moving/"},
+        {"label": "直立鋼琴（由…起）", "amountMin": 800, "amountMax": null, "currency": "HKD", "unit": "from", "sourceUrl": "https://speedy-move.com/moving/"},
+        {"label": "紙箱（10個一套）", "amountMin": 200, "amountMax": 200, "currency": "HKD", "unit": "set of 10", "sourceUrl": "https://speedy-move.com/moving/"}
+      ],
+      "feeNote": "套餐標明 Prices are estimates only—final quotes are based on individual case assessments.",
+      "sources": ["https://speedy-move.com/moving/"],
+      "lastChecked": "2026-10-07"
+    },
+    {
+      "id": "east-asia",
+      "name": "東亞搬運",
+      "nameEn": "East Asia Moving and Packing",
+      "website": "https://www.eamovers.com.hk/",
+      "phone": "+852 2958 1233",
+      "whatsapp": "+852 5361 0054",
+      "notes": "Est. 2001. Residential/office, packing materials included in many quotes, mini storage, piano/safe. Online quotation terms: weekday min HKD1000 / weekend HKD1800; tunnel & parking excluded; stairs/podium included in quote (except complex village roads). Company page states typical family move ~HKD2000–4000. Alternate marketing page lists room-size budget bands.",
+      "coverage": {
+        "midLevelsPeak": "Serves HK Island / Kowloon / NT; no Moorsom-specific page found",
+        "northPoint": "Island-wide; Consumer Council 2024 survey used a North Point→Mei Foo scenario including this firm among 20",
+        "islandLocal": true,
+        "sources": [
+          "https://www.eamovers.com.hk/",
+          "https://www.eamovers.com.hk/app/index/service/15",
+          "https://eamovers.com.hk/app/indexen/online_quotation"
+        ]
+      },
+      "feeStatus": "published",
+      "fees": [
+        {"label": "一般家庭搬屋費用（公司陳述常見範圍）", "amountMin": 2000, "amountMax": 4000, "currency": "HKD", "unit": "job range", "sourceUrl": "https://www.eamovers.com.hk/app/index/service/15"},
+        {"label": "最低消費（星期一至五）", "amountMin": 1000, "amountMax": 1000, "currency": "HKD", "unit": "job minimum", "sourceUrl": "https://eamovers.com.hk/app/indexen/online_quotation"},
+        {"label": "最低消費（星期六、日）", "amountMin": 1800, "amountMax": 1800, "currency": "HKD", "unit": "job minimum", "sourceUrl": "https://eamovers.com.hk/app/indexen/online_quotation"},
+        {"label": "額外停靠點", "amountMin": 200, "amountMax": 500, "currency": "HKD", "unit": "per extra stop", "sourceUrl": "https://eamovers.com.hk/app/indexen/online_quotation"},
+        {"label": "1房單位預算（宣傳頁）", "amountMin": 1000, "amountMax": 2000, "currency": "HKD", "unit": "room band", "sourceUrl": "https://eamovers.wp.atomtechnology.com.hk/"},
+        {"label": "2房單位預算（宣傳頁）", "amountMin": 2500, "amountMax": 4800, "currency": "HKD", "unit": "room band", "sourceUrl": "https://eamovers.wp.atomtechnology.com.hk/"},
+        {"label": "3房單位預算（宣傳頁）", "amountMin": 4800, "amountMax": 8000, "currency": "HKD", "unit": "room band", "sourceUrl": "https://eamovers.wp.atomtechnology.com.hk/"}
+      ],
+      "sources": [
+        "https://www.eamovers.com.hk/",
+        "https://www.eamovers.com.hk/app/index/contact",
+        "https://www.eamovers.com.hk/app/index/service/15",
+        "https://eamovers.com.hk/app/indexen/online_quotation",
+        "https://eamovers.wp.atomtechnology.com.hk/"
+      ],
+      "lastChecked": "2026-10-07"
+    },
+    {
+      "id": "gogox",
+      "name": "GoGoX 搬屋服務",
+      "nameEn": "GoGoX Moving",
+      "website": "https://www.gogox.com/hk/moving/",
+      "phone": "+852 2337 1234",
+      "whatsapp": "+852 6467 5050",
+      "notes": "Platform: Call Van (distance fare), hourly charter (min 3h), or full-service fixed-price moving from HKD800. Stair carry negotiated with driver on Call Van. Public pricing table for vans/trucks and time surcharges. Useful budget/DIY option vs full movers.",
+      "coverage": {
+        "midLevelsPeak": "Territory-wide platform; access/stairs handled case-by-case",
+        "northPoint": "Territory-wide",
+        "islandLocal": true,
+        "sources": [
+          "https://www.gogox.com/hk/pricing/",
+          "https://www.gogox.com/hk/blog/gogox-moving-service-comparison/"
+        ]
+      },
+      "feeStatus": "published",
+      "fees": [
+        {"label": "GoGoX 全包式搬屋服務（由…起）", "amountMin": 800, "amountMax": null, "currency": "HKD", "unit": "from", "sourceUrl": "https://www.gogox.com/hk/blog/gogox-moving-service-comparison/"},
+        {"label": "Call 貨Van 路程費（由…起）", "amountMin": 55, "amountMax": null, "currency": "HKD", "unit": "from", "sourceUrl": "https://www.gogox.com/hk/blog/gogox-moving-service-comparison/"},
+        {"label": "Call 5.5噸路程費（由…起）", "amountMin": 135, "amountMax": null, "currency": "HKD", "unit": "from", "sourceUrl": "https://www.gogox.com/hk/blog/gogox-moving-service-comparison/"},
+        {"label": "日間包鐘貨Van（最少3小時）", "amountMin": 120, "amountMax": 120, "currency": "HKD", "unit": "per hour", "sourceUrl": "https://www.gogox.com/hk/pricing/"},
+        {"label": "日間包鐘5.5噸（最少3小時）", "amountMin": 180, "amountMax": 180, "currency": "HKD", "unit": "per hour", "sourceUrl": "https://www.gogox.com/hk/pricing/"},
+        {"label": "星期日及公眾假期附加（貨Van 07:00–20:59）", "amountMin": 15, "amountMax": 15, "currency": "HKD", "unit": "per order", "sourceUrl": "https://www.gogox.com/hk/pricing/"},
+        {"label": "上樓搬運（Call Van）", "amountMin": null, "amountMax": null, "currency": "HKD", "unit": "negotiate with driver", "sourceUrl": "https://www.gogox.com/hk/pricing/"}
+      ],
+      "sources": [
+        "https://www.gogox.com/hk/pricing/",
+        "https://www.gogox.com/hk/blog/gogox-moving-service-comparison/",
+        "https://www.gogox.com/hk/moving/"
+      ],
+      "lastChecked": "2026-10-07"
+    },
+    {
+      "id": "yan-yan",
+      "name": "人人搬屋",
+      "nameEn": "Yan Yan Movers",
+      "website": "https://yanyan.hk/zh",
+      "phone": "+852 2388 6883",
+      "whatsapp": "+852 6822 7288",
+      "notes": "Est. 1960. Residential & corporate local moves; packing, storage, dismantling, disposal. Site promotes online instant quote; live price table is JS-rendered (Cloudflare blocked automated full scrape 2026-10-07). Consumer Council 2024 survey recorded this firm (#20) with weekday min HKD1000 / weekend HKD1800 — survey snapshot, not a live rate card.",
+      "coverage": {
+        "midLevelsPeak": "HK-wide local mover; no Moorsom-specific public page found",
+        "northPoint": "Included in Consumer Council North Point→Mei Foo survey panel",
+        "islandLocal": true,
+        "sources": [
+          "https://yanyan.hk/zh",
+          "https://yanyan.hk/en",
+          "https://www.consumer.org.hk/f/article_tab/435986/464257/573-home-removal-service-table001.pdf"
+        ]
+      },
+      "feeStatus": "需報價",
+      "fees": [],
+      "feeNote": "需報價。消委會2024調查表記錄人人搬屋最低消費平日HKD1,000／周末HKD1,800（歷史調查，非現行官網價目）。",
+      "surveyFees": [
+        {"label": "消委會2024調查：最低消費（平日）", "amountMin": 1000, "amountMax": 1000, "currency": "HKD", "unit": "survey snapshot", "sourceUrl": "https://www.consumer.org.hk/f/article_tab/435986/464257/573-home-removal-service-table001.pdf"},
+        {"label": "消委會2024調查：最低消費（周末）", "amountMin": 1800, "amountMax": 1800, "currency": "HKD", "unit": "survey snapshot", "sourceUrl": "https://www.consumer.org.hk/f/article_tab/435986/464257/573-home-removal-service-table001.pdf"}
+      ],
+      "sources": [
+        "https://yanyan.hk/zh",
+        "https://yanyan.hk/en",
+        "https://www.consumer.org.hk/tc/article/573-home-removal-service/573-home-removal-service-price-comparison"
+      ],
+      "lastChecked": "2026-10-07"
+    },
+    {
+      "id": "best-movers-hk",
+      "name": "Best Movers HK",
+      "nameEn": "Best Movers Hong Kong Limited",
+      "website": "https://bestmovershk.com/local-moving/",
+      "phone": "+852 2777 7509",
+      "whatsapp": null,
+      "notes": "Est. 2012. Local residential/office; packing, unpacking, dismantling, storage, disposal. Explicitly lists Mid-Levels and North Point in HK Island coverage. Emphasises service-lift booking, restricted loading times, stair access, limited parking. No public numeric rate card found — quote only.",
+      "coverage": {
+        "midLevelsPeak": "Lists Mid-Levels",
+        "northPoint": "Lists North Point",
+        "islandLocal": true,
+        "sources": ["https://bestmovershk.com/local-moving/"]
+      },
+      "feeStatus": "需報價",
+      "fees": [],
+      "feeNote": "需報價",
+      "sources": ["https://bestmovershk.com/local-moving/"],
+      "lastChecked": "2026-10-07"
+    },
+    {
+      "id": "ftc-relocations",
+      "name": "FTC Relocations",
+      "nameEn": "FTC Relocations",
+      "website": "https://ftc.hk/",
+      "phone": "+852 2814 1658",
+      "whatsapp": null,
+      "notes": "Local & international. Dedicated Mid-Levels landing page: packing, stair carries, hoisting, lift reservations, parking restrictions common in Mid-Levels. Since 2004 per Mid-Levels page. No public numeric local-move rate card found.",
+      "coverage": {
+        "midLevelsPeak": "Dedicated Mid-Levels moving page",
+        "northPoint": "HK-wide local moves claimed; North Point not specifically listed on fetched pages",
+        "islandLocal": true,
+        "sources": [
+          "https://ftc.hk/mid-levels-moving-company",
+          "https://ftc.hk/contact-us"
+        ]
+      },
+      "feeStatus": "需報價",
+      "fees": [],
+      "feeNote": "需報價",
+      "sources": [
+        "https://ftc.hk/mid-levels-moving-company",
+        "https://ftc.hk/contact-us"
+      ],
+      "lastChecked": "2026-10-07"
+    }
+  ],
+  "hkMoveContextFactors": [
+    {
+      "factor": "貨梯／升降機預約（service lift booking）",
+      "detail": "Managed buildings often require advance service-lift reservation and permitted moving hours; deposits may apply. CC Move Eastern District guide: large estates usually need management registration ≥1 week ahead.",
+      "sources": [
+        "https://bestmovershk.com/local-moving/",
+        "https://ccmove.com.hk/%E5%A4%A7%E5%BB%88%E6%90%AC%E5%B1%8B%E8%B3%87%E6%96%99/%E6%9D%B1%E5%8D%80/",
+        "https://www.applemoving.com.hk/"
+      ]
+    },
+    {
+      "factor": "樓梯搬運附加費",
+      "detail": "Consumer Council 2024: among per-item firms, stair surcharge often 15–20% of total per floor (15–20 steps); one firm 30%. Company examples: Apple % bands by step count; PriceRight 30% per floor of moving fee; Star Express HKD30–100/item/floor; Speedy HKD50–200/large item/flight.",
+      "sources": [
+        "https://www.consumer.org.hk/tc/article/573-home-removal-service/573-home-removal-service-price-comparison",
+        "https://www.applemoving.com.hk/en/eng-pricing/",
+        "https://www.priceright.com.hk/moving-price-list-hk/",
+        "https://www.starexpresshk.com/moving-pricing",
+        "https://speedy-move.com/moving/"
+      ]
+    },
+    {
+      "factor": "泊車／推路／平台轉𨋢",
+      "detail": "Mid-Levels / Peak-adjacent narrow roads and distant loading points drive push fees. Apple: ≥50m +20%, ≥200m +30%, platform lift HKD300. PriceRight: push % of fee; Island Mid-Levels narrow-road note. Star Express: HKD100–300 per ~50m push; transfer/height-limit needs assessment. East Asia online quote includes stairs/podium (excl. complex village roads); tunnel/parking separate.",
+      "sources": [
+        "https://www.applemoving.com.hk/en/eng-pricing/",
+        "https://www.priceright.com.hk/moving-price-list-hk/",
+        "https://www.starexpresshk.com/moving-pricing",
+        "https://eamovers.com.hk/app/indexen/online_quotation",
+        "https://ftc.hk/mid-levels-moving-company"
+      ]
+    },
+    {
+      "factor": "週末／公眾假期附加費",
+      "detail": "Apple +20% Sunday/PH. PriceRight +HKD200 Sat/Sun/PH. East Asia weekend minimum HKD1800 vs weekday HKD1000. GoGoX Call Van Sunday/PH surcharges on published table. Consumer Council noted most surveyed firms did not charge weekend fee except one (+HKD200) in the per-item subset.",
+      "sources": [
+        "https://www.applemoving.com.hk/en/eng-pricing/",
+        "https://www.priceright.com.hk/moving-price-list-hk/",
+        "https://eamovers.com.hk/app/indexen/online_quotation",
+        "https://www.gogox.com/hk/pricing/",
+        "https://www.consumer.org.hk/tc/article/573-home-removal-service/573-home-removal-service-price-comparison"
+      ]
+    },
+    {
+      "factor": "北角／城市花園相關公開資料",
+      "detail": "CC Move Eastern District page lists 城市花園 among estates and notes North Point older buildings may have small lifts. Consumer Council 2024 example scenario: North Point 5-person household Saturday move → Mei Foo, quotes HKD3,818–12,162 across 20 firms (survey prices, not current quotes).",
+      "sources": [
+        "https://ccmove.com.hk/%E5%A4%A7%E5%BB%88%E6%90%AC%E5%B1%8B%E8%B3%87%E6%96%99/%E6%9D%B1%E5%8D%80/",
+        "https://www.consumer.org.hk/tc/article/573-home-removal-service/573-home-removal-service-price-comparison"
+      ]
+    },
+    {
+      "factor": "Moorsom Road / Jardine's Lookout access",
+      "detail": "No mover published a Moorsom Road-specific fee. Public geography: Moorsom Road is Jardine's Lookout (Peak-adjacent), not Central Mid-Levels escalator corridor — expect narrow roads, possible distant parking, stair/push factors typical of Peak/Mid-Levels pages (FTC, Best Movers, Speedy Mid Level list).",
+      "sources": [
+        "https://ftc.hk/mid-levels-moving-company",
+        "https://bestmovershk.com/local-moving/",
+        "https://speedy-move.com/moving/"
+      ]
+    }
+  ],
+  "gaps": {
+    "publicRates": [
+      "蘋果搬運 — full package + surcharge table",
+      "長治搬運 — calculator base + add-ons (budget tool)",
+      "港昇搬運 — budget ranges + add-on bands",
+      "實惠搬屋 — full per-item list + % surcharges",
+      "迅速搬運 — package from-prices + some add-ons",
+      "東亞搬運 — mins + typical ranges (+ room bands on marketing mirror)",
+      "GoGoX — platform fares, hourly, full-service from HKD800"
+    ],
+    "quoteOnly": [
+      "人人搬屋 — live rate card JS/Cloudflare; only Consumer Council 2024 mins as survey snapshot",
+      "Best Movers HK — no numeric rates",
+      "FTC Relocations — Mid-Levels specialist page but quote-only"
+    ],
+    "missingOrWeak": [
+      "No company published Moorsom Road or City Garden job-specific prices",
+      "Yan Yan cubic-foot rates appear in search-index snippets of yanyan.hk but could not be live-verified 2026-10-07 — excluded from fees[]",
+      "Traditional Chinese brand names for Best Movers HK / FTC / Speedy Move not consistently published (Speedy used 迅速搬運 as working TC label from English brand; confirm on booking)",
+      "WhatsApp missing on Best Movers & FTC public pages fetched",
+      "Consumer Council dollar quotes are 2024 survey scenarios — do not use as 2026 bookable prices"
+    ]
+  }
+}

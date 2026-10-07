@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-HK">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Moorsom Road → City Garden：比較港島住宅搬屋公司公開價目與聯絡，資料來自各公司網站及公開調查。" />
+  <title>港島搬屋格｜Moorsom Road → City Garden</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#movers">跳至搬屋公司列表</a>
+
+  <header class="site-header" id="top">
+    <div class="header-inner">
+      <a class="brand" href="#top">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text">港島搬屋格</span>
+      </a>
+      <nav class="nav" aria-label="主要">
+        <a href="#route">路線</a>
+        <a href="#movers">公司</a>
+        <a href="#factors">注意事項</a>
+        <a href="#gaps">資料缺口</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <p class="brand-hero">港島搬屋格</p>
+        <h1 id="hero-title">
+          <span class="route-from">Moorsom Road</span>
+          <span class="route-arrow" aria-hidden="true">→</span>
+          <span class="route-to">City Garden</span>
+        </h1>
+        <p class="hero-sub">
+          <span id="route-label">Moorsom Road → City Garden · 公開價目比較</span>
+          <span class="hero-sub-en" id="route-note"></span>
+        </p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#movers">睇公司同價錢</a>
+          <a class="btn btn-ghost" href="#factors">樓宇出入貼士</a>
+        </div>
+        <p class="hero-meta" id="updated-at" hidden></p>
+      </div>
+    </section>
+
+    <section class="route-section" id="route" aria-labelledby="route-heading">
+      <div class="section-inner">
+        <h2 id="route-heading">路線一覽</h2>
+        <p class="section-lead">港島內短途（半山／山頂毗鄰 → 東區）。價錢多由貨梯、樓梯、泊車同推路決定，多於車程。</p>
+        <div class="route-visual">
+          <figure class="map-frame">
+            <iframe
+              title="OpenStreetMap：Moorsom Road 至 City Garden"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=114.175%2C22.270%2C114.205%2C22.295&amp;layer=mapnik&amp;marker=22.2785%2C114.1855"
+            ></iframe>
+            <figcaption>
+              <a href="https://www.openstreetmap.org/?mlat=22.2785&amp;mlon=114.1855#map=14/22.282/114.190" target="_blank" rel="noopener noreferrer">在 OpenStreetMap 開啟</a>
+              · 無 API key
+            </figcaption>
+          </figure>
+          <div class="route-svg-wrap" aria-hidden="true">
+            <svg class="route-svg" viewBox="0 0 320 200" role="img">
+              <defs>
+                <linearGradient id="roadGrad" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0%" stop-color="#c8102e" />
+                  <stop offset="100%" stop-color="#1a6b8a" />
+                </linearGradient>
+              </defs>
+              <rect width="320" height="200" fill="#0f1a24" rx="12" />
+              <path d="M40 150 C90 140, 110 80, 160 70 C210 60, 240 90, 280 55" fill="none" stroke="url(#roadGrad)" stroke-width="4" stroke-linecap="round" class="route-path" />
+              <circle cx="40" cy="150" r="10" fill="#c8102e" />
+              <circle cx="280" cy="55" r="10" fill="#1a6b8a" />
+              <text x="40" y="178" text-anchor="middle" fill="#f2f4f6" font-size="11" font-family="Noto Sans TC, sans-serif">Moorsom Rd</text>
+              <text x="40" y="192" text-anchor="middle" fill="#9aa6b2" font-size="9" font-family="Noto Sans TC, sans-serif">渣甸山</text>
+              <text x="280" y="30" text-anchor="middle" fill="#f2f4f6" font-size="11" font-family="Noto Sans TC, sans-serif">City Garden</text>
+              <text x="280" y="44" text-anchor="middle" fill="#9aa6b2" font-size="9" font-family="Noto Sans TC, sans-serif">北角</text>
+            </svg>
+          </div>
+        </div>
+        <ul class="route-facts">
+          <li><strong>舊址</strong> Moorsom Road 屬渣甸山／山頂毗鄰，窄路、遠泊、行樓梯／推路較常見。</li>
+          <li><strong>新址</strong> 城市花園大型屋苑，貨梯預約與泊車高度要先問管理處。</li>
+          <li><strong>價錢關鍵</strong> 兩邊樓宇出入附加費，通常比港島短途車程更影響總費。</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="movers-section" id="movers" aria-labelledby="movers-heading">
+      <div class="section-inner">
+        <div class="section-head">
+          <h2 id="movers-heading">搬屋公司比較</h2>
+          <p class="section-lead">
+            由 <code>data.json</code> 載入（schema v<span id="schema-version">—</span>）。
+            <span class="feeStatus published">published</span> 顯示公開價目並連到來源；
+            <span class="feeStatus quote">需報價</span> 則不顯示虛構價錢。
+          </p>
+        </div>
+        <div id="movers-status" class="status" role="status" aria-live="polite">載入中…</div>
+        <div id="movers-list" class="movers-list" hidden></div>
+      </div>
+    </section>
+
+    <section class="tips-section" id="factors" aria-labelledby="factors-heading">
+      <div class="section-inner">
+        <h2 id="factors-heading">呢條線要注意</h2>
+        <p class="section-lead">貨梯、樓梯、泊車／推路、假日附加費等公開資料整理（每項附來源）。</p>
+        <div id="factors-list" class="tips-list"></div>
+      </div>
+    </section>
+
+    <section class="ask-section" id="gaps" aria-labelledby="gaps-heading">
+      <div class="section-inner">
+        <h2 id="gaps-heading">資料缺口</h2>
+        <p class="section-lead">研究時已核實／未能核實的公開價目範圍，方便你自行跟進。</p>
+        <div id="gaps-panels" class="gaps-panels"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p id="disclaimer" class="disclaimer"></p>
+      <p class="footer-note">
+        本站為公開資料整理，不含客戶私人資料。
+        貨幣 <span id="meta-currency">HKD</span> · 時區 <span id="meta-timezone">Asia/Hong_Kong</span>。
+        <a href="https://www.consumer.org.hk/tc/press-release/p-573-home-removal-service" target="_blank" rel="noopener noreferrer">消委會搬屋服務調查</a>
+      </p>
+      <p class="footer-meta">
+        <span id="footer-updated"></span>
+        · <a href="data.json">data.json</a>
+      </p>
+    </div>
+  </footer>
+
+  <template id="mover-card-tpl">
+    <article class="mover-card">
+      <div class="mover-card-top">
+        <div class="mover-identity">
+          <h3 class="mover-name-zh"></h3>
+          <p class="mover-name-en"></p>
+          <p class="mover-checked"></p>
+        </div>
+        <p class="mover-fee-status"></p>
+      </div>
+      <p class="mover-notes"></p>
+      <div class="mover-coverage" hidden>
+        <h4>服務範圍筆記</h4>
+        <ul class="coverage-list"></ul>
+      </div>
+      <div class="mover-fees" hidden>
+        <h4>公開價目</h4>
+        <ul class="fees-list"></ul>
+        <p class="fee-note" hidden></p>
+      </div>
+      <div class="mover-survey" hidden>
+        <h4>調查快照（非現行官網價）</h4>
+        <ul class="survey-list"></ul>
+      </div>
+      <div class="mover-actions">
+        <a class="btn btn-call" href="#">致電</a>
+        <a class="btn btn-wa" href="#" target="_blank" rel="noopener noreferrer" hidden>WhatsApp</a>
+        <a class="btn btn-web" href="#" target="_blank" rel="noopener noreferrer">官方網站</a>
+      </div>
+      <div class="mover-sources">
+        <h4>資料來源</h4>
+        <ul class="sources-list"></ul>
+      </div>
+    </article>
+  </template>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
