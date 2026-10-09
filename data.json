@@ -3,7 +3,7 @@
     "routeLabel": "Moorsom Road (HK Island / Jardine's Lookout area) → City Garden, North Point",
     "routeNote": "只作公開比較，不含私人地址。兩端均位於港島（半山／山頂鄰近地段 → 東區）。",
     "currency": "HKD",
-    "lastChecked": "2026-10-07",
+    "lastChecked": "2026-10-09",
     "timezone": "Asia/Hong_Kong",
     "disclaimer": "收費只抄錄自公司公開網頁或已引用的公開調查，並非報價。請務必向公司再次確認。平台或調查數字不可視作具約束力的價格。"
   },
@@ -658,7 +658,7 @@
       "website": "https://yanyan.hk/zh",
       "phone": "+852 2388 6883",
       "whatsapp": "+852 6822 7288",
-      "notes": "1960 年成立。住宅及企業本地搬遷；包裝、儲存、拆裝及棄置。網站提供網上即時報價；實時價目表以 JavaScript 載入（2026-10-07 自動擷取全文時被 Cloudflare 阻擋）。消委會 2024 年調查記錄此公司（第 20 號）最低消費平日 HKD1000／週末 HKD1800——屬調查記錄，並非現行價目表。",
+      "notes": "1960 年成立。住宅及企業本地搬遷；包裝、儲存、拆裝及棄置。2026-10-09 於英文頁找到公開體積計費公式（每立方呎 HKD10，最低 HKD1,000 等）；中文頁擷取曾遇 Cloudflare／403。網上估算工具仍可能需互動；正式金額以實際體積及公司確認為準。消委會 2024 年調查記錄此公司最低消費平日 HKD1000／週末 HKD1800——屬調查記錄，另見 surveyFees。",
       "coverage": {
         "midLevelsPeak": "全港本地搬屋公司；未找到 Moorsom Road 專頁",
         "northPoint": "列入消委會北角→美孚調查名單",
@@ -669,9 +669,58 @@
           "https://www.consumer.org.hk/f/article_tab/435986/464257/573-home-removal-service-table001.pdf"
         ]
       },
-      "feeStatus": "需報價",
-      "fees": [],
-      "feeNote": "需報價。消委會2024調查表記錄人人搬屋最低消費平日HKD1,000／周末HKD1,800（歷史調查，非現行官網價目）。",
+      "feeStatus": "published",
+      "fees": [
+        {
+          "label": "基本搬運費（按體積）",
+          "amountMin": 10,
+          "amountMax": 10,
+          "currency": "HKD",
+          "unit": "per cubic feet",
+          "sourceUrl": "https://yanyan.hk/en"
+        },
+        {
+          "label": "基本搬運費最低消費",
+          "amountMin": 1000,
+          "amountMax": 1000,
+          "currency": "HKD",
+          "unit": "job minimum",
+          "sourceUrl": "https://yanyan.hk/en"
+        },
+        {
+          "label": "樓梯附加",
+          "amountMin": null,
+          "amountMax": null,
+          "currency": "HKD",
+          "unit": "15% of base moving fee per floor",
+          "sourceUrl": "https://yanyan.hk/en"
+        },
+        {
+          "label": "平台／長距離推運",
+          "amountMin": null,
+          "amountMax": null,
+          "currency": "HKD",
+          "unit": "15% of base moving fee per 100m",
+          "sourceUrl": "https://yanyan.hk/en"
+        },
+        {
+          "label": "存倉服務",
+          "amountMin": 500,
+          "amountMax": 500,
+          "currency": "HKD",
+          "unit": "per 50 cubic feet (months)",
+          "sourceUrl": "https://yanyan.hk/en"
+        },
+        {
+          "label": "包裝服務",
+          "amountMin": 300,
+          "amountMax": 300,
+          "currency": "HKD",
+          "unit": "per packer per hour",
+          "sourceUrl": "https://yanyan.hk/en"
+        }
+      ],
+      "feeNote": "官網英文頁（yanyan.hk/en）公開估算公式：基本費每立方呎 HKD10（每單最低 HKD1,000）；樓梯每層為基本費 15%；平台／長距離推運每 100m 為基本費 15%；存倉每 50 立方呎 HKD500；包裝每名包裝員每小時 HKD300。頁面註明初步範圍僅供參考，準確報價需 WhatsApp／現場確認。消委會2024調查最低消費（平日1000／週末1800）仍保留於 surveyFees 作歷史記錄。",
       "surveyFees": [
         {
           "label": "消委會2024調查：最低消費（平日）",
@@ -695,7 +744,7 @@
         "https://yanyan.hk/en",
         "https://www.consumer.org.hk/tc/article/573-home-removal-service/573-home-removal-service-price-comparison"
       ],
-      "lastChecked": "2026-10-07"
+      "lastChecked": "2026-10-09"
     },
     {
       "id": "best-movers-hk",
@@ -828,16 +877,15 @@
       "實惠搬屋——詳盡逐件價目及百分比附加費",
       "迅速搬運——套餐起價及部分附加項目",
       "東亞搬運——最低消費及常見範圍（宣傳頁另有按房數區間）",
-      "GoGoX——平台車資、包鐘、全包式搬屋 HKD800 起"
+      "GoGoX——平台車資、包鐘、全包式搬屋 HKD800 起",
+      "人人搬屋——英文頁公開體積計費（每立方呎 HKD10，最低 HKD1,000 等）"
     ],
     "quoteOnly": [
-      "人人搬屋——實時價目表以 JS／Cloudflare 載入；只有消委會 2024 年最低消費作調查記錄",
       "Best Movers HK——沒有數字價目",
       "FTC Relocations——設半山專頁，但需報價"
     ],
     "missingOrWeak": [
       "沒有公司公開 Moorsom Road 或城市花園的個別工程價格",
-      "人人搬屋每立方呎收費只見於搜尋引擎摘要，2026-10-07 未能實時核實——不列入 fees[]",
       "Best Movers HK／FTC／迅速搬運的中文品牌名稱未有一致公開（迅速搬運為按英文品牌暫用的中文名稱；預約時請確認）",
       "已擷取的 Best Movers 及 FTC 公開網頁未有 WhatsApp",
       "消委會金額為 2024 年調查情境——不可當作 2026 年可預約價格"
